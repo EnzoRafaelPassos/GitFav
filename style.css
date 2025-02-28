@@ -53,9 +53,9 @@ html:not(.light) .ph-moon {
 
 html.light {
     --text-color: #000000;
-    --bg-color: #c7c7de;
-    --thead-color: #81a2ac;
-    --odd-color: rgba(157, 182, 190, 0.5);
+    --bg-color: #bbc1fb;
+    --thead-color: #5793a5;
+    --odd-color: rgba(159, 196, 208, 0.5);
     --even-color: hsl(190, 70%, 73%);
     --btn-remove-color: #ad0211;
     --bg-btn: #40bde6;
