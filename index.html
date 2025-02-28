@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="light">
 
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,7 @@
     <link rel="shortcut icon" href="Assets/Estrela.svg" type="image/svg">
     <title>GitFav</title>
     <script type="module" defer src="index.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 </head>
 
 <body>
@@ -40,11 +41,16 @@
                 <tr id="notFavorite">
                     <td>
                         <img src="Assets/Estrela.svg" alt="">
-                    <p>Nenhum favorito ainda</p>
+                        <p>Nenhum favorito ainda</p>
                     </td>
                 </tr>
             </tbody>
         </table>
+
+        <button id="toggleMode">
+            <img src="Assets/sun.svg" class="ph-sun" alt="" srcset="">
+            <img src="Assets/moon.svg" class="ph-moon" alt="" srcset="">
+        </button>
 
     </div>
 </body>

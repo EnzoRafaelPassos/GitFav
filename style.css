@@ -28,10 +28,43 @@
     --notUser: hsl(189, 4%, 32%);
 }
 
+html {
+    background-color: var(--bg-color);
+    transition: background ease-in-out 0.5s;
+}
+
+
+html.light .ph-sun,
+html:not(.light) .ph-moon {
+    display: none;
+}
+
+
+#toggleMode {
+    position: absolute;
+    border: none;
+    right: 3rem;
+    bottom: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 1rem;
+    line-height: 0;
+}
+
+html.light {
+    --text-color: #000000;
+    --bg-color: #c7c7de;
+    --thead-color: #81a2ac;
+    --odd-color: rgba(157, 182, 190, 0.5);
+    --even-color: hsl(190, 70%, 73%);
+    --btn-remove-color: #ad0211;
+    --bg-btn: #40bde6;
+}
+
 body {
     font-size: 1.6rem;
 
-    background-color: var(--bg-color);
+
     color: var(--text-color);
 }
 
@@ -109,6 +142,7 @@ table {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+
 }
 
 
@@ -118,6 +152,7 @@ table thead {
     background-color: var(--thead-color);
     position: sticky;
     top: 0;
+    color: var(--text-color);
 }
 
 table thead * {
@@ -151,22 +186,22 @@ table tbody {
     align-items: stretch;
     max-height: 45rem;
     overflow: auto;
-    overflow: overlay; 
+    overflow: overlay;
     scrollbar-color: var(--scroll-bar-color) transparent;
     scrollbar-width: thin;
 }
 
 table tbody::-webkit-scrollbar {
     width: 22px;
-    border-radius: 9999px; 
+    border-radius: 9999px;
 }
 
 table tbody::-webkit-scrollbar-thumb {
     width: 6px;
     background-color: transparent;
     border-radius: 8rem;
-    box-shadow: inset 0 0 0px 6px var(--scroll-bar-color); 
-    border: solid 8px transparent; /
+    box-shadow: inset 0 0 0px 6px var(--scroll-bar-color);
+    border: solid 8px transparent;/
 }
 
 table tbody tr:nth-child(odd) {
@@ -210,6 +245,7 @@ tbody tr:nth-child(even) {
 .action button {
     background-color: transparent;
     border: none;
+    font-weight: bold;
     color: var(--btn-remove-color);
     cursor: pointer;
 }
@@ -219,13 +255,13 @@ tbody tr:nth-child(even) {
     justify-content: center;
 }
 
-#notFavorite {  
+#notFavorite {
     height: 45rem;
     display: none;
-   justify-content: center;
-   align-items: center;
+    justify-content: center;
+    align-items: center;
     font-size: 4.0rem;
     font-weight: bold;
     color: var(--notUser);
-    
+
 }
